@@ -33,9 +33,17 @@ const NewFile = () => {
     const [file, setFile] = useState(null);
     const [uploading, setUploading] = useState(false);
 
+    const handleOpen = () => {
+        setOpen(true);
+    }
+
+    const handleClose = () => {
+        setOpen(false);
+    }
+
     return (
         <div className="newFile">
-            <div className="newFile__container">
+            <div className="newFile__container" onClick={handleOpen}>
             {/*    plus icon    */}
                 <AddOutlined />
                 <p>New</p>
