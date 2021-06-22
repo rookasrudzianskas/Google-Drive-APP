@@ -41,6 +41,13 @@ const NewFile = () => {
         setOpen(false);
     }
 
+    const handleChange = (e) => {
+        if (e.target.files[0]) {
+            setFile(e.target.files[0])
+        }
+    }
+
+
     return (
         <div className="newFile">
             <div className="newFile__container" onClick={handleOpen}>
