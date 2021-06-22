@@ -40,6 +40,7 @@
     height: 120%;
     background-color: rgb(237, 237, 237);
     align-items: center;
+    display: flex;
     padding: 0 8px;
 }
 
@@ -55,5 +56,10 @@
     background:  none;
     border: none;
     margin-left: 12px;
+    outline: none;
+}
+
+.header__searchBar > input:focus {
+    color: black;
     outline: none;
 }
