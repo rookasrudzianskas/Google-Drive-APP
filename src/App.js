@@ -9,14 +9,30 @@ function App() {
 
   const [user, setUser] = useState({});
 
+  const handleLogin = () => {
+
+  }
+
   return (
     <div className="app">
-      <Header userPhoto={user.photoUrl} />
-        <div className="app__main">
-          <Sidebar />
-          <FilesView />
-          <SideIcons />
-        </div>
+      {
+        user ? (
+            <>
+                <Header userPhoto={user.photoUrl} />
+                   <div className="app__main">
+                 <Sidebar />
+                  <FilesView />
+                  <SideIcons />
+            </div>
+            </>
+        ) : (
+            <div className="app__login">
+              <img src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Drive.max-1100x1100.png" alt=""/>
+              <button onClick={handleLogin}>Log in to Google Drive</button>
+            </div>
+        )
+      }
+
     </div>
   );
 }
