@@ -52,7 +52,7 @@ const NewFile = () => {
     const handleUpload = () => {
         setUploading(true);
 
-        storage.ref(`files/${files.name}`).put(files).then(snapshot => {
+        storage.ref(`files/${file.name}`).put(file).then(snapshot => {
             console.log(snapshot);
 
             storage.ref('files').child(file.name).getDownloadURL().then(url => {
