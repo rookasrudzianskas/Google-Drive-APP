@@ -8,3 +8,28 @@
     overflow-y: hidden; /* Hide vertical scrollbar */
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
+
+.app__login {
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    display: grid;
+    place-items: center;
+}
+
+.app__login > button {
+    border: none;
+    font-size: 24px;
+    background-color: rgb(67,130, 244);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.app__login > img {
+    width: 300px;
+    object-fit: contain;
+}

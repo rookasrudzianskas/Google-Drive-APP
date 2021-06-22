@@ -4,13 +4,18 @@ import Sidebar from "./components/sidebar";
 import FilesView from "./components/filesView/FilesView";
 import {useState} from "react";
 import SideIcons from "../src/components/sideIcons/index";
+import {auth, provider} from "./firebase";
 
 function App() {
 
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState(null);
 
   const handleLogin = () => {
-
+    if(!user) {
+      auth.signInWithPopup(provider).then((result) => {
+        setUser(result.user);
+      })
+    }
   }
 
   return (
@@ -18,7 +23,7 @@ function App() {
       {
         user ? (
             <>
-                <Header userPhoto={user.photoUrl} />
+                <Header userPhoto={user.photoURL} />
                    <div className="app__main">
                  <Sidebar />
                   <FilesView />
