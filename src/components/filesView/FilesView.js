@@ -5,6 +5,7 @@ const FilesView = () => {
 
     const [files, setFiles] = useState([]);
 
+    // we get all the data here
     useEffect(() => {
         db.collection('myFiles').onSnapshot(snapshot => {
             setFiles(snapshot.docs.map(doc => ({
