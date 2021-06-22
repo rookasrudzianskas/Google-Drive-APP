@@ -25,7 +25,15 @@ const FileItem = ({ id, caption, timestamp, fileUrl, size }) => {
     return (
         <div className='fileItem'>
             <a href={fileUrl} target="_blank" download>
+                <div className="fileItem--left">
+                    <InsertDriveFileIcon />
+                    <p>{caption}</p>
+                </div>
 
+                <div className="fileItem--right">
+                    <p>{fileDate}</p>
+                    <p>{getReadableFileSizeString(size)}</p>
+                </div>
             </a>
         </div>
     )
