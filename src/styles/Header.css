@@ -63,3 +63,19 @@
     color: black;
     outline: none;
 }
+
+.header__icons {
+    display: flex;
+    align-items: center;
+    margin-right: -30px;
+}
+
+.header__icons > .MuiSvgIcon-root {
+    font-size: 28px;
+    color: rgb(82, 82, 82);
+    margin: 4px;
+}
+
+.header__icons > span {
+    margin-right: 20px;
+}
