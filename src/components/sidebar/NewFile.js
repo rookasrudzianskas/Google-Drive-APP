@@ -1,6 +1,7 @@
 import React from 'react';
 import {AddOutlined} from "@material-ui/icons";
 import "../../styles/NewFile.css";
+import {storage, db} from "../../firebase";
 
 const NewFile = () => {
     return (
