@@ -1,5 +1,6 @@
 import React from 'react';
 import {AddOutlined} from "@material-ui/icons";
+import '../../styles/SideIcons.css';
 
 const index = () => {
     return (
