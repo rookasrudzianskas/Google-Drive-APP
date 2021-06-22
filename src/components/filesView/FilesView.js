@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {db} from "../../firebase";
 import FileItem from "./FileItem";
-
+import "../../styles/FilesView.css";
 const FilesView = () => {
 
     const [files, setFiles] = useState([]);
@@ -39,7 +39,7 @@ const FilesView = () => {
 
             {
                 files.map(({id, item}) => (
-                    <FileItem id={id} caption={item.caption} size={item.size} timestamp={item.timestamp} fileUrl={item.fileUrl} />
+                    <FileItem key={id} id={id} caption={item.caption} size={item.size} timestamp={item.timestamp} fileUrl={item.fileUrl} />
                 ))
             }
         </div>
