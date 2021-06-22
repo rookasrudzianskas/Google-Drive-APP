@@ -18,6 +18,7 @@
 
 .sidebarItem__main {
     display: flex;
+    align-items: center;
 }
 
 .sidebarItem__main > p {
