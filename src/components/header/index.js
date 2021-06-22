@@ -1,5 +1,5 @@
 import React from 'react';
-import {ExpandMore, SearchOutlined} from "@material-ui/icons";
+import {ExpandMore, HelpOutlined, SearchOutlined, SettingsOutlined} from "@material-ui/icons";
 
 const Header = () => {
     return (
@@ -9,16 +9,20 @@ const Header = () => {
                 <span>Drive</span>
                 </div>
                 <div className="header__searchContainer">
-                    <div className="header__searchContainer">
                         <div className="header__searchBar">
                             <SearchOutlined />
                             <input type="text" placeholder="Search in drive"/>
                             <ExpandMore />
                         </div>
                     </div>
-                    <div className="header__icons"></div>
+                    <div className="header__icons">
+                        <span>
+                            <HelpOutlined />
+                            <SettingsOutlined />
+                        </span>
 
-            </div>
+                        <img src="https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg" alt="User Photo"/>
+                    </div>
         </div>
     );
 };
