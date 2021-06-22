@@ -1,9 +1,17 @@
 import React from 'react';
+import {ArrowRightOutlined} from "@material-ui/icons";
 
-const SidebarItem = () => {
+const SidebarItem = ({arrow, Icon, label}) => {
     return (
         <div className="sidebarItem">
+            <div className="sidebarItem__arrow">
+                {arrow && (<ArrowRightOutlined />)}
+            </div>
 
+            <div className="sidebarItem__main">
+                {Icon}
+                <p>{label}</p>
+            </div>
         </div>
     );
 };
