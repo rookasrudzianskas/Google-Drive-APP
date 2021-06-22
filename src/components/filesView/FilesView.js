@@ -33,6 +33,7 @@ const FilesView = () => {
                 </div>
             </div>
 
+
         {/*    file items go in here*/}
         </div>
     );
