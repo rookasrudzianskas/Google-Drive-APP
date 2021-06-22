@@ -4,6 +4,7 @@ import "../../styles/NewFile.css";
 import {storage, db} from "../../firebase";
 import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
+import firebase from "firebase";
 
 
 function getModalStyle() {
@@ -42,9 +43,32 @@ const NewFile = () => {
     }
 
     const handleChange = (e) => {
+        // this is starting the process in here
         if (e.target.files[0]) {
             setFile(e.target.files[0])
         }
+    }
+
+    const handleUpload = () => {
+        setUploading(true);
+
+        storage.ref(`files/${files.name}`).put(files).then(snapshot => {
+            console.log(snapshot);
+
+            storage.ref('files').child(file.name).getDownloadURL().then(url => {
+                db.collection('myFiles').add({
+                    timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+                    caption: file.name,
+                    fileUrl: url,
+                    // size is this one
+                    size: snapshot._delegate.bytesTransferred,
+                })
+
+                setUploading(false);
+                setOpen(false);
+                setFile(null);
+            })
+        })
     }
 
 
