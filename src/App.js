@@ -14,10 +14,12 @@ function App() {
     photoUrl: "https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg",
   })
   return (
-    <div className="app__main">
+    <div className="app">
       <Header userPhoto={user.photoUrl} />
-        <Sidebar />
-        <FilesView />
+        <div className="app__main">
+          <Sidebar />
+          <FilesView />
+        </div>
     </div>
   );
 }

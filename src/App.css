@@ -1,4 +1,8 @@
 .app__main {
+    display: flex;
+}
+
+.app {
     height: 100vh;
     width: 100vw;
     overflow-y: hidden; /* Hide vertical scrollbar */
