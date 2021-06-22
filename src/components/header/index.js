@@ -1,5 +1,6 @@
 import React from 'react';
 import {ExpandMore, HelpOutlined, SearchOutlined, SettingsOutlined} from "@material-ui/icons";
+import "../../styles/Header.css";
 
 const Header = () => {
     return (
