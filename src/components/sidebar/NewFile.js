@@ -52,11 +52,14 @@ const NewFile = () => {
     const handleUpload = () => {
         setUploading(true);
 
+        // creates a location to upload the thing
         storage.ref(`files/${file.name}`).put(file).then(snapshot => {
             console.log(snapshot);
 
+            // gets download url, and sets it to the database as the download url
             storage.ref('files').child(file.name).getDownloadURL().then(url => {
                 db.collection('myFiles').add({
+                    // the following stuff goes in here
                     timestamp: firebase.firestore.FieldValue.serverTimestamp(),
                     caption: file.name,
                     fileUrl: url,
@@ -64,6 +67,7 @@ const NewFile = () => {
                     size: snapshot._delegate.bytesTransferred,
                 })
 
+                // resets everything after successful upload
                 setUploading(false);
                 setOpen(false);
                 setFile(null);
