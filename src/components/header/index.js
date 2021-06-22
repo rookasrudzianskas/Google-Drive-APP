@@ -2,7 +2,7 @@ import React from 'react';
 import {AppsOutlined, ExpandMore, HelpOutlined, SearchOutlined, SettingsOutlined} from "@material-ui/icons";
 import "../../styles/Header.css";
 
-const Header = () => {
+const Header = ({userPhoto}) => {
     return (
 
     <div className='header'>
@@ -23,7 +23,7 @@ const Header = () => {
                             <SettingsOutlined />
                 </span>
             <AppsOutlined />
-            <img src="https://pbs.twimg.com/profile_images/1350895249678348292/RS1Aa0iK.jpg" alt="User Photo"/>
+            <img src={userPhoto} alt="User Photo"/>
         </div>
     </div>
     );
