@@ -6,8 +6,11 @@ const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep
 // all shit which arrives from another component
 const FileItem = ({ id, caption, timestamp, fileUrl, size }) => {
     // we create the file date, with all of this
+    // + 1 because it starts counting from 0
     const fileDate = `${timestamp?.toDate().getDate()} ${monthNames[timestamp?.toDate().getMonth() + 1]} ${timestamp?.toDate().getFullYear()}`
 
+    // this grabs the size number, and converts it to the something readable
+    // not that shitty number, we cannot understand
     const getReadableFileSizeString = (fileSizeInBytes) => {
         let i = -1;
         const byteUnits = [' kB', ' MB', ' GB', ' TB', 'PB', 'EB', 'ZB', 'YB'];
