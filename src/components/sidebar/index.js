@@ -6,9 +6,10 @@ import {
     InsertDriveFileOutlined,
     PeopleAltOutlined,
     QueryBuilderOutlined,
-    StarBorderOutlined
+    StarBorderOutlined, StorageOutlined
 } from "@material-ui/icons";
 import SidebarItem from "./SidebarItem";
+import "../../styles/Sidebar.css";
 
 const Sidebar = () => {
     return (
@@ -24,6 +25,9 @@ const Sidebar = () => {
                 <SidebarItem Icon={(<DeleteOutlined />)} label={'Bin'} />
 
                 <hr/>
+
+                <SidebarItem Icon={(<StorageOutlined />)} label={'Storage'} />
+
 
 
             </div>

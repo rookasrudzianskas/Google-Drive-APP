@@ -1,5 +1,6 @@
 import React from 'react';
 import {AddOutlined} from "@material-ui/icons";
+import "../../styles/NewFile.css";
 
 const NewFile = () => {
     return (

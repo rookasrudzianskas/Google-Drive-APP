@@ -1,0 +1,21 @@
+.newFile {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    padding-left: 20px;
+}
+
+.newFile__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 32px 10px 8px;
+    border-radius: 50px;
+    -webkit-box-shadow: 1px 1px 13px -6px #000000;
+    box-shadow: 1px 1px 13px -6px #000000;
+    cursor: pointer;
+}
+
+.newFile__container > p {
+    margin-left: 14px;
+}

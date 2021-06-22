@@ -1,5 +1,6 @@
 import React from 'react';
 import {ArrowRightOutlined} from "@material-ui/icons";
+import "../../styles/SidebarItem.css";
 
 const SidebarItem = ({arrow, Icon, label}) => {
     return (
